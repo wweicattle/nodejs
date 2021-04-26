@@ -9,3 +9,5 @@ var f="\\sfds\\dsf\\";
 var cd="saa/df";
 var finalName=path.resolve(f,cd);
 console.log(finalName);
+
+
