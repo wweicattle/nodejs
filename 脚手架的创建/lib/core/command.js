@@ -1,11 +1,19 @@
 const program = require("commander");
-const createProject=require("./../util/createProject");
-const command = (floder) => {
+const create = require("./../util/createProject");
+const command = () => {
   program
     .command("create <project>  [others...]")
     .description("from clone your project ?")
-    .action(createProject);
+    .action(create.createProject);
+
+
+  // ww addCp 需要进行命令添加组件
+  program
+    .command("addcp <project>  [others...]")
+    .description("from clone your componenta?")
+    .action(create.createCompent);
+
 };
 
 
-module.exports=command;
+module.exports = command;

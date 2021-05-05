@@ -8,7 +8,7 @@ program.version(require("./package.json").version);
 
 
 // 添加项目描述project descripe
-command("/wuwei")
+command()
 
 // 命令帮助添加
 helpOption();

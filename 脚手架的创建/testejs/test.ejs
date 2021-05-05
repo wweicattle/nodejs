@@ -1,0 +1,5 @@
+<ul>
+    <% for(var i = 0; i < people.length; i++) { %>
+    <li><%= link_to(people[i], "/profiles/" + people[i]) %></li>
+    <% } %>
+</ul>
