@@ -1,0 +1,14 @@
+{
+  "name": "bu",
+  "version": "1.0.0",
+  "description": "你时刻要知道处理器cpu执行的一定是低级语言二进制，万物的数据包括文本，音乐，视频，图片都是需要\r 转化为二进制cpu在执行的，比如一张图片你可以看成是一个由多个px，每个px是一个rgb,meige rgb就是对应着二进制，这样才能让cpu进行执行啊！\r 那么在服务器上我们可能会使用对数据二进制的修改等，所以node中出现类buffer对数据二进制最好的处理。",
+  "main": "imgOperator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.28.1"
+  }
+}

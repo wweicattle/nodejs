@@ -1,7 +1,7 @@
 const program = require("commander");
 
 let option = () => {
-  program.option("-d --dest <dest>", "pelease write your des ?/src/component/");
+  program.option('-d --dest <dest>', 'a destination folder, 例如: -d src/pages, 错误/src/pages');
   program.option("-f --framework", "change framework");
   program.on("--help", function () {
     console.log("");

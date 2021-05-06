@@ -10,8 +10,12 @@ const command = () => {
   // ww addCp 需要进行命令添加组件
   program
     .command("addcp <project>  [others...]")
-    .description("from clone your componenta?")
-    .action(create.createCompent);
+    .description("from clone your component?")
+    .action((name)=>{
+      console.log("---------");
+      console.log(program.dest);
+      create.createCompent(name,program.dest||"src/components/menu.vue")
+    });
 
 };
 
