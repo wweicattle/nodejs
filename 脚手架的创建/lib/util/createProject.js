@@ -48,7 +48,7 @@ let createCompent = async (arg, des) => {
     console.log(arg,des);
     console.log("正在创建组件中. . . ");
     let paths = "../templates/components.ejs";
-    let despath = path.resolve(__dirname, paths)
+    let despath = path.resolve(__dirname, paths);
     ejs.renderFile(despath, {
         data: {
             name: arg
@@ -61,8 +61,8 @@ let createCompent = async (arg, des) => {
         }
         // console.log(result);
         let paths = path.resolve(__dirname, "../../" + des)
-        let ishave = find(paths);
-        console.log(ishave);
+        // let ishave = find(paths);
+        // console.log(ishave);
         // if (ishave) {
         // } else {
         //     fs.mkdirSync("/sas", { recursive: true },(err,s)=>{

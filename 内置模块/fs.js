@@ -1,7 +1,7 @@
 const { COPYFILE_FICLONE_FORCE } = require("constants");
-var fs=require("fs")
+var fs=require("fs");
 
-var path=require("path")
+var path=require("path");
 fs.open("../abc.txt",(err,fd)=>{
     console.log(err);
     console.log(fd);
