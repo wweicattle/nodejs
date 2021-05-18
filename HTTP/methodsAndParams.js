@@ -34,6 +34,9 @@ let server = http.createServer((req, res) => {
     if (pathname.indexOf("/res") != -1) {
         res.end("you res,please login!!")
     }
+
+    
+
     // res.clo
 
     // let obj = qs.parse(query)
