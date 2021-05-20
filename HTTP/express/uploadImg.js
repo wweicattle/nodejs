@@ -20,7 +20,7 @@ var createFolder = function (folder) {
     }
 };
 
-var uploadFolder = './uploadss/';
+var uploadFolder = './uploadssw/';
 
 createFolder(uploadFolder);
 
@@ -40,18 +40,21 @@ var storage = multer.diskStorage({
 var upload = multer({
     storage: storage
 })
+app.use("/login",upload.any(), (req, res) => {
+    console.log(req.body);
+    res.end("over!");
 
-
-
+})
+// app.use();
 app.post('/profileimg', upload.single("file"), function (req, res, next) {
-    console.log(req.path);
+    console.log(req.file);
     // req.file is the `avatar` file
     // req.body will hold the text fields, if there were any
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    req.on("data",(da)=>{
+    req.on("data", (da) => {
         console.log(da);
     })
     console.log(req.file);
