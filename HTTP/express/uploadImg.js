@@ -40,7 +40,7 @@ var storage = multer.diskStorage({
 var upload = multer({
     storage: storage
 })
-app.use("/login",upload.any(), (req, res) => {
+app.use("/login", upload.any(), (req, res) => {
     console.log(req.body);
     res.end("over!");
 
@@ -64,7 +64,13 @@ app.post('/profileimg', upload.single("file"), function (req, res, next) {
     })
 
 })
-
+app.post("/up", (req, res) => {
+    console.log(req.file);
+    req.on("data",(da)=>{
+        console.log(da.toString());
+    })
+    res.end("you win")
+})
 app.listen(1666, () => {
     console.log("begins");
 })
